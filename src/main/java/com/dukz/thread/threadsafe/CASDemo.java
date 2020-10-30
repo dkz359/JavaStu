@@ -1,4 +1,4 @@
-package com.dukz.threadsafe;
+package com.dukz.thread.threadsafe;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
