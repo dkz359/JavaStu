@@ -24,6 +24,8 @@ public class LocalDateTest {
 
         LocalTime now = LocalTime.now();
         System.out.println("now: "+now);
+        LocalTime now0 = now.withHour(5);
+        System.out.println("now0: "+now0);
 
         LocalTime now1 = LocalTime.parse("09:30");
         System.out.println("now1: "+now1);
