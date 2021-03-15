@@ -16,7 +16,7 @@ public class LoginServlet {
         try {
             usernameRef = username;
             if (StringUtils.equals("a", username)){
-                Thread.sleep(3000);
+                Thread.sleep(5000);
             }
             passwordRef = password;
             System.out.println("username="+usernameRef+" password="+password);
