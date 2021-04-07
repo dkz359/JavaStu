@@ -1,2 +1,2 @@
 # JavaStu
-This repo use java learn
+This repository is used to learn java
