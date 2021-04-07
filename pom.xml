@@ -54,6 +54,13 @@
             <artifactId>logback-core</artifactId>
             <version>${logback-core.version}</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.openjdk.jol/jol-core -->
+        <!-- 用于查看对象头信息 -->
+        <dependency>
+            <groupId>org.openjdk.jol</groupId>
+            <artifactId>jol-core</artifactId>
+            <version>0.9</version>
+        </dependency>
 
     </dependencies>
 

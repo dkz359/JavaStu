@@ -1,4 +1,4 @@
-package com.dukz.threadpool;
+package com.dukz.thread.threadpool;
 
 /**
  * @author dukezheng
