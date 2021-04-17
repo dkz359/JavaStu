@@ -1,4 +1,4 @@
-package com.dukz.concurrent.blockingqueue;
+package com.dukz.concurrentcontainer.blockingqueue;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
