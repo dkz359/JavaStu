@@ -9,10 +9,9 @@ package thread.t1.threadsafe;
  */
 public class Run {
     public static void main(String[] args) {
-        Thread.currentThread().interrupt();
-
-        System.out.println("是否停止1 = "+Thread.currentThread().isInterrupted());
-        System.out.println("是否停止2 = "+Thread.currentThread().isInterrupted());
-        System.out.println("end");
+        ALogin a =  new ALogin();
+        a.start();
+        BLogin b = new BLogin();
+        b.start();
     }
 }

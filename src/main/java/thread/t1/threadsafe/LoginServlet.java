@@ -12,14 +12,15 @@ import org.apache.commons.lang3.StringUtils;
 public class LoginServlet {
     private static String usernameRef;
     private static String passwordRef;
-    synchronized public static void doPost(String username, String password){
+
+    public synchronized static void doPost(String username, String password) {
         try {
             usernameRef = username;
             if (StringUtils.equals("a", username)){
                 Thread.sleep(5000);
             }
             passwordRef = password;
-            System.out.println("username="+usernameRef+" password="+password);
+            System.out.println("username=" + usernameRef + " password=" + passwordRef);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
