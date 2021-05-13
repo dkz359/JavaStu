@@ -5,7 +5,8 @@ import com.dukz.tools.SleepUtils;
 /**
  * @author dukezheng
  * @ClassName ThreadTest
- * @Description TODO
+ * @Description 停止线程
+ * thread.interrupt()不会终止一个正在运行的线程
  * @date 2021/5/11 20:24
  * @Version 1.0
  */
