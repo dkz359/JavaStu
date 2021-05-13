@@ -1,6 +1,6 @@
 package com.dukz.thread.base.threadabort;
 
-import com.dukz.utils.ThreadUtils;
+import com.dukz.tools.SleepUtils;
 
 /**
  * @author dukezheng
@@ -16,7 +16,7 @@ public class StopThread extends Thread {
 	@Override public void run() {
 		synchronized (this) {
 			++i;
-			ThreadUtils.sleepSecond(10);
+			SleepUtils.second(10);
 			++j;
 		}
 	}

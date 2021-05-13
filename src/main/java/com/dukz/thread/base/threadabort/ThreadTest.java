@@ -1,6 +1,6 @@
 package com.dukz.thread.base.threadabort;
 
-import com.dukz.utils.ThreadUtils;
+import com.dukz.tools.SleepUtils;
 
 /**
  * @author dukezheng
@@ -14,7 +14,7 @@ public class ThreadTest {
 		StopThread thread = new StopThread();
 		thread.start();
 		// 休眠1秒，保证i自增完成
-		ThreadUtils.sleepSecond(1);
+		SleepUtils.second(1);
 		// 错误中止线程
 		// thread.stop();
 		// 正确中止线程
