@@ -1,4 +1,4 @@
-package com.dukz.datastructure.lineartable;
+package com.dukz.datastructure.lineartable.list;
 
 /**
  * @author dukezheng
