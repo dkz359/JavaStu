@@ -1,4 +1,4 @@
-package com.dukz.proxy.dynamicproxy.jdk;
+package com.dukz.proxy;
 
 /**
  * @author dukezheng

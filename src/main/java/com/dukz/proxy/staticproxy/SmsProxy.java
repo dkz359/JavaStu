@@ -1,5 +1,7 @@
 package com.dukz.proxy.staticproxy;
 
+import com.dukz.proxy.SmsService;
+
 /**
  * @author dukezheng
  * @ClassName SmsProxy

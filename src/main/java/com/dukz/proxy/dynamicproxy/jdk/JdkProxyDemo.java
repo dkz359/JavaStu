@@ -1,5 +1,8 @@
 package com.dukz.proxy.dynamicproxy.jdk;
 
+import com.dukz.proxy.SmsService;
+import com.dukz.proxy.SmsServiceImpl;
+
 import java.lang.reflect.Proxy;
 
 /**
@@ -12,8 +15,7 @@ import java.lang.reflect.Proxy;
 public class JdkProxyDemo {
 	public static void main(String[] args) {
 		SmsService smsService = new SmsServiceImpl();
-		SmsService proxy = (SmsService)Proxy.newProxyInstance(smsService.getClass().getClassLoader(), smsService.getClass().getInterfaces(),
-			new SmsInvocationHandler(smsService));
+		SmsService proxy = (SmsService)JdkProxyFactory.getProxy(smsService);
 
 		proxy.send("jdk dynamic proxy");
 	}
