@@ -3,6 +3,7 @@ package com.dukz.algorithm.sort;
 /**
  * @author dukezheng
  * @ClassName BubbleSort
+ * 每次【冒泡】两个相邻元素比较大小，并按规则交换顺序
  * @Description 冒泡排序
  * @date 2021/6/4 16:39
  * @Version 1.0

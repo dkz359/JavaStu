@@ -10,7 +10,10 @@ package com.dukz.algorithm.sort;
 public class TestSort {
 	public static void main(String[] args) {
 		int[] a = new int[]{3,5,4,1,2,6};
-		BubbleSort.sort(a, a.length);
+		// BubbleSort.sort(a, a.length);
+		// InsertionSort.sort(a, a.length);
+		// SelectionSort.sort(a, a.length);
+		ShellSort.sort(a, a.length);
 		printArray(a);
 	}
 
