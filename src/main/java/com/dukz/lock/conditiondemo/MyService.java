@@ -16,8 +16,8 @@ public class MyService {
     private Condition condition = lock.newCondition();
 
     public void waitMethod(){
+        lock.lock();
         try {
-            lock.lock();
             System.out.println("await time: "+ System.currentTimeMillis());
             condition.await();
         } catch (Exception e) {
@@ -28,8 +28,8 @@ public class MyService {
     }
 
     public void signalMethod(){
+        lock.lock();
         try {
-            lock.lock();
             System.out.println("signal time: "+ System.currentTimeMillis());
             condition.signal();
         } catch (Exception e) {
