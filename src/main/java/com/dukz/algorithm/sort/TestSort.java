@@ -13,7 +13,8 @@ public class TestSort {
 		// BubbleSort.sort(a, a.length);
 		// InsertionSort.sort(a, a.length);
 		// SelectionSort.sort(a, a.length);
-		ShellSort.sort(a, a.length);
+		// ShellSort.sort(a, a.length);
+		MergeSort.sort(a, a.length);
 		printArray(a);
 	}
 
@@ -21,5 +22,6 @@ public class TestSort {
 		for (int i = 0; i < a.length; i++) {
 			System.out.print(a[i]+" ");
 		}
+		System.out.println();
 	}
 }
