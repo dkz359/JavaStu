@@ -15,7 +15,8 @@ public class TestSort {
 		// SelectionSort.sort(a, a.length);
 		// ShellSort.sort(a, a.length);
 		// MergeSort.sort(a, a.length);
-		QuickSort.sort(a, a.length);
+		// QuickSort.sort(a, a.length);
+		CountingSort.sort(a, a.length);
 		printArray(a);
 	}
 
