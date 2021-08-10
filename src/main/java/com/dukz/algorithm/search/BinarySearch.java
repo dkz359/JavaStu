@@ -14,7 +14,7 @@ public class BinarySearch {
 
 	private static int binarySearch(int[] num, int low, int high, int val){
 		if(low > high){ return -1;}
-		int mid = low+(high-low)/2;
+		int mid = low + ((high-low)>>2);
 		if(num[mid] == val){
 			return mid;
 		}

@@ -17,7 +17,7 @@ public class MergeSort {
 		if (p >= r) {
 			return;
 		}
-		int q = (p + r) / 2;
+		int q = p + ((r-p)>>2);
 		merge_sort(a, p, q);
 		merge_sort(a, q + 1, r);
 		merge(a, p, r);
