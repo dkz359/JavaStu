@@ -23,23 +23,11 @@ import java.util.*;
 public class Test {
 
     public static void main(String[] args) {
-	    ArrayListMultimap<Object, Object> multimap = ArrayListMultimap.create();
-	    multimap.put("1", "a");
-	    multimap.put("1", "b");
-	    multimap.put("2", "c");
-	    Map<Object, Collection<Object>> map = multimap.asMap();
-	    System.out.println(map.size());
-	    Set<Map.Entry<Object, Collection<Object>>> entries = map.entrySet();
-	    Iterator<Map.Entry<Object, Collection<Object>>> iterator = entries.iterator();
-	    Collection<Object> baseValue = iterator.next().getValue();
-	    while (iterator.hasNext()){
-		    Collection<Object> value = iterator.next().getValue();
-		    for (Object o : baseValue) {
-			    for (Object o1 : value) {
+    	String s1 = new StringBuilder("计算机").append("软件").toString();
+		System.out.println(s1.intern() == s1);
 
-			    }
-		    }
-	    }
+		String s2 = new StringBuilder("ja").append("va").toString();
+		System.out.println(s2.intern() == s2);
     }
 
 }
