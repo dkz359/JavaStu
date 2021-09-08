@@ -1,4 +1,4 @@
-package com.dukz.jvm;
+package com.dukz.jvm.outofmemory;
 
 import java.util.ArrayList;
 import java.util.List;
