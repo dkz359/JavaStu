@@ -1,4 +1,4 @@
-package com.dukz.concurrenttools.semaphore;
+package com.dukz.concurrent.concurrenttools.semaphore;
 
 import java.util.Random;
 import java.util.concurrent.Semaphore;

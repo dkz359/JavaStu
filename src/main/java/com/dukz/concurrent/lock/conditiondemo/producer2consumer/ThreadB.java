@@ -1,4 +1,4 @@
-package com.dukz.lock.conditiondemo.producer2consumer;
+package com.dukz.concurrent.lock.conditiondemo.producer2consumer;
 
 /**
  * @ClassName ThreadB

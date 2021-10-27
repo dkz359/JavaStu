@@ -1,4 +1,4 @@
-package com.dukz.lock.conditiondemo;
+package com.dukz.concurrent.lock.conditiondemo;
 
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
