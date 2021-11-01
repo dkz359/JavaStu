@@ -30,5 +30,7 @@ public class GraphDemo {
 		graph.addEdge(7,4);
 		graph.addEdge(7,6);
 		graph.bfs(2, 7);
+		System.out.println();
+		graph.dfs(2,7);
 	}
 }
