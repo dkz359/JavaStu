@@ -1,7 +1,6 @@
-package com.dukz.lock.conditiondemo.producer2consumer;
+package com.dukz.concurrent.lock.conditiondemo.producer2consumer;
 
 import java.util.concurrent.locks.Condition;
-import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**

@@ -1,7 +1,7 @@
 package com.dukz.httpserver;
 
-import com.dukz.threadpool.DefaultThreadPool;
-import com.dukz.threadpool.ThreadPool;
+import com.dukz.thread.threadpool.DefaultThreadPool;
+import com.dukz.thread.threadpool.ThreadPool;
 
 import java.io.*;
 import java.net.ServerSocket;

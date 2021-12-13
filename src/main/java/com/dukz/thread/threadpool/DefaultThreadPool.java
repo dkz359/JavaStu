@@ -1,11 +1,10 @@
-package com.dukz.threadpool;
+package com.dukz.thread.threadpool;
 
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicLong;
 
 /**

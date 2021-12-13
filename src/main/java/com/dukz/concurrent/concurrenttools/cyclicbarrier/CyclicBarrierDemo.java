@@ -1,4 +1,4 @@
-package com.dukz.concurrenttools.cyclicbarrier;
+package com.dukz.concurrent.concurrenttools.cyclicbarrier;
 
 /**
  * @author dukezheng

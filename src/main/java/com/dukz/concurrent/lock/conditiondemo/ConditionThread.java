@@ -1,4 +1,4 @@
-package com.dukz.lock.conditiondemo;
+package com.dukz.concurrent.lock.conditiondemo;
 
 /**
  * @ClassName ConditionThread
