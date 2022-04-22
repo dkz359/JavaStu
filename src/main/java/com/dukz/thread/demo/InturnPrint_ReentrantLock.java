@@ -30,6 +30,7 @@ public class InturnPrint_ReentrantLock {
                     conditionT2.signal();
                     conditionT1.await();
                 }
+                conditionT2.signal();
             }catch (Exception e){
                 e.printStackTrace();
             }finally {
@@ -44,6 +45,7 @@ public class InturnPrint_ReentrantLock {
                     conditionT1.signal();
                     conditionT2.await();
                 }
+                conditionT1.signal();
             }catch (Exception e){
                 e.printStackTrace();
             }finally {
