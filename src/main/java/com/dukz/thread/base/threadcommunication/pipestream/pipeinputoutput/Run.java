@@ -1,6 +1,6 @@
 package com.dukz.thread.base.threadcommunication.pipestream.pipeinputoutput;
 
-import com.dukz.tools.SleepUtils;
+import com.dukz.utils.SleepUtils;
 
 import java.io.IOException;
 import java.io.PipedInputStream;

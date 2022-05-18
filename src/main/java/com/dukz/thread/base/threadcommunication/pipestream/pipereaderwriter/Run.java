@@ -1,7 +1,7 @@
 package com.dukz.thread.base.threadcommunication.pipestream.pipereaderwriter;
 
 
-import com.dukz.tools.SleepUtils;
+import com.dukz.utils.SleepUtils;
 
 import java.io.IOException;
 import java.io.PipedReader;

@@ -1,6 +1,6 @@
 package com.dukz.thread.base.stopthread;
 
-import com.dukz.tools.SleepUtils;
+import com.dukz.utils.SleepUtils;
 
 /**
  * @ClassName InterruptThreadDemo
