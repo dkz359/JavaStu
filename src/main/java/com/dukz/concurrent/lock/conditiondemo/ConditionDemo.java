@@ -1,6 +1,6 @@
 package com.dukz.concurrent.lock.conditiondemo;
 
-import com.dukz.tools.SleepUtils;
+import com.dukz.utils.SleepUtils;
 
 /**
  * @ClassName ConditionDemo

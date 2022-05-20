@@ -1,6 +1,6 @@
 package com.dukz.algorithm.sort;
 
-import com.dukz.tools.ArrayUtils;
+import com.dukz.utils.ArrayUtils;
 
 /**
  * @author dukezheng
