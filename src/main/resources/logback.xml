@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- logback日志级别 TRACE < DEBUG < INFO < WARN < ERROR -->
+<!-- scan：定期扫描配置文件是否变化，变化了自动加载；scanPeriod：扫描间隔时间；debug：为false不输出logback框架本身的日志 -->
+<configuration scan="true" scanPeriod="60 seconds" debug="false">
+    <!-- 定义参数常量 -->
+    <define name="ip" class="com.dukz.utils.logback.LogbackIpGetProperty" />
+    <define name="port" class="com.dukz.utils.logback.LogbackPortGetProperty" />
+    <define name="baseHome" class="com.dukz.utils.logback.LogbackHomeGetProperty" />
+    <!-- 日志级别，小于这个级别的日志不被记录 -->
+    <property name="log.level" value="debug"/>
+    <!-- 日志文件保留多长时间，单位：天 -->
+    <property name="log.maxHistory" value="30"/>
+
+    <!-- 日志内容的显示格式 -->
+    <property name="log.pattern" value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{20} - %msg%n"/>
+
+    <!-- 控制台输出设置 -->
+    <appender name="consoleAppender" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>${log.pattern}</pattern>
+        </encoder>
+    </appender>
+
+    <!-- DEBUG -->
+    <appender name="debugAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!-- 文件路径 -->
+        <file>${baseHome}/debug.log</file>
+        <!-- 日志记录按天保存，就是每天都会有一个日志文件保存当天的所有日志 -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- 文件名称 -->
+            <fileNamePattern>${baseHome}/debug/debug.%d{yyyy-MM-dd}.log.gz</fileNamePattern>
+            <!-- 文件保存多久 -->
+            <maxHistory>${log.maxHistory}</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>${log.pattern}</pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>DEBUG</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+
+    <!-- INFO -->
+    <appender name="infoAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!-- 文件路径 -->
+        <file>${baseHome}/info.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- 文件名称 -->
+            <fileNamePattern>${baseHome}/info/info.%d{yyyy-MM-dd}.log.gz</fileNamePattern>
+            <!-- 文件最大保存历史数量 -->
+            <maxHistory>${log.maxHistory}</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>${log.pattern}</pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>INFO</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+
+    <!-- ERROR -->
+    <appender name="errorAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!-- 文件路径 -->
+        <file>${baseHome}/error.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- 文件名称 -->
+            <fileNamePattern>${baseHome}/error/error.%d{yyyy-MM-dd}.log.gz</fileNamePattern>
+            <!-- 文件最大保存历史数量 -->
+            <maxHistory>${log.maxHistory}</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>${log.pattern}</pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>ERROR</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+
+    <!-- 创建logger对象
+        name：关注哪个包下的日志信息；level：仅记录哪个级别及以上的日志
+        additivity：为true时会将root里的appender-ref也加入进来，level不基于root -->
+    <logger name="com.dukz" level="${log.level}" additivity="false">
+        <appender-ref ref="debugAppender"/>
+        <appender-ref ref="infoAppender"/>
+        <appender-ref ref="errorAppender"/>
+    </logger>
+
+    <!-- root：所有logger的父类 -->
+    <root level="info">
+        <appender-ref ref="consoleAppender"/>
+    </root>
+</configuration>
