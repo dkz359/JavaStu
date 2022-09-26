@@ -1,8 +1,6 @@
 package com.dukz.blockchain;
 
-import com.dukz.utils.StringUtil;
-
-import java.util.Date;
+import com.dukz.utils.StrUtil;
 
 /**
  * 区块链Block
@@ -39,7 +37,7 @@ public class Block {
     }
 
     public String calculateHash() {
-        String calculatedhash = StringUtil.applySha256(
+        String calculatedhash = StrUtil.applySha256(
                 previousHash +
                         Long.toString(timeStamp) +
                         Integer.toString(nonce) +
