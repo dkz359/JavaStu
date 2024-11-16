@@ -1,6 +1,6 @@
 package com.dukz.thread.base.threadabort;
 
-import com.dukz.tools.SleepUtils;
+import com.dukz.utils.SleepUtils;
 
 /**
  * @author dukezheng

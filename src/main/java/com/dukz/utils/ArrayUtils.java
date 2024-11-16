@@ -1,4 +1,4 @@
-package com.dukz.tools;
+package com.dukz.utils;
 
 /**
  * @author dukezheng

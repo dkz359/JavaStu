@@ -1,6 +1,6 @@
 package com.dukz.thread.base;
 
-import com.dukz.tools.SleepUtils;
+import com.dukz.utils.SleepUtils;
 
 /**
  * @ClassName ThreadState
