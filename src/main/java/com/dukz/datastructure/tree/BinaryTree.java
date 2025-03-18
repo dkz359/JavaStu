@@ -1,7 +1,5 @@
 package com.dukz.datastructure.tree;
 
-import static com.sun.deploy.uitoolkit.impl.awt.AWTClientPrintHelper.print;
-
 /**
  * @author dukezheng
  * @ClassName BinaryTree

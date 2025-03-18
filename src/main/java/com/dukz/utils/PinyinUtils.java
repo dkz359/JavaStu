@@ -1,6 +1,6 @@
 package com.dukz.utils;
 
-import com.github.promeg.pinyinhelper.Pinyin;
+// import com.github.promeg.pinyinhelper.Pinyin;
 import java.util.Arrays;
 import org.apache.commons.lang3.StringUtils;
 
@@ -20,7 +20,8 @@ public class PinyinUtils {
      */
     public static String getFirstLetter(String chinese){
         // 1. 生成拼音
-        String pinyin = Pinyin.toPinyin(chinese," ");
+        // String pinyin = Pinyin.toPinyin(chinese," ");
+        String pinyin = "";
         // 2. 生成拼音首字母数组
         Character[] chars = Arrays.stream(pinyin.split(" "))
                 .map(val -> val.charAt(0)).toArray(Character[]::new);
